@@ -7,11 +7,16 @@ license-file:        LICENSE
 author:              Cortland Walker
 maintainer:          cortlandits@gmail.com
 copyright:           2016 Cortland Walker
-category:            Machine Learning
+category:            Machine Learning, Classification, Support Vector Machine
 build-type:          Simple
 cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
   default-language:    Haskell2010
-  build-depends:       base >= 4.7 && < 5
+
+  build-depends:
+		-- apt-get install libsvm-tools       
+		base >= 4.7 && < 5
+	, inline-c	>= 0.5.5.5
+	, inline-c-cpp >= 0.1 
